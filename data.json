@@ -1,0 +1,133 @@
+{
+  "updated": "2026-06-16T11:24:21+00:00",
+  "window_days": 5,
+  "datetype": "edat",
+  "count": 5,
+  "tier1_count": 2,
+  "source": "PubMed (NCBI E-utilities)",
+  "articles": [
+    {
+      "pmid": "40000003",
+      "title": "Patient-specific 3D-printed phantoms for ultrasound-guided biopsy rehearsal: a systematic review",
+      "abstract": "Objective: To review phantom-based rehearsal methods. Conclusion: Phantoms improve accuracy.",
+      "journal": "Eur Radiol",
+      "date": "2026-06-13",
+      "authors": [
+        "Novak P",
+        "Andersson E"
+      ],
+      "pubtypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "doi": "10.1007/s00330-024-00003-x",
+      "journal_tier": 1,
+      "score": 149.0,
+      "score_parts": {
+        "journal": 100,
+        "pubtype": 45,
+        "recency": 4.0
+      },
+      "tier": 1
+    },
+    {
+      "pmid": "40000001",
+      "title": "Shear-wave elastography of the tongue in hypothyroid patients: a cross-sectional study",
+      "abstract": "Background: Tongue stiffness may reflect systemic effects of hypothyroidism. Methods: 120 patients underwent shear-wave elastography. Results: Mean SWE was higher in patients.",
+      "journal": "Radiology",
+      "date": "2026-06-15",
+      "authors": [
+        "Yilmaz AY",
+        "Demir K",
+        "Koc M"
+      ],
+      "pubtypes": [
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "doi": "10.1148/radiol.240001",
+      "journal_tier": 1,
+      "score": 143.0,
+      "score_parts": {
+        "journal": 100,
+        "pubtype": 35,
+        "recency": 8.0
+      },
+      "tier": 1
+    },
+    {
+      "pmid": "40000002",
+      "title": "Deep learning for breast lesion characterization on DCE-MRI: a multicenter validation",
+      "abstract": "Purpose: To validate a deep-learning model across five centers. Results: AUC 0.91.",
+      "journal": "Radiol Artif Intell",
+      "date": "2026-06-14",
+      "authors": [
+        "Schmidt L",
+        "Rossi G",
+        "Tan W"
+      ],
+      "pubtypes": [
+        "Journal Article",
+        "Multicenter Study",
+        "Validation Study"
+      ],
+      "doi": "10.1148/ryai.240002",
+      "journal_tier": 1,
+      "score": 124.0,
+      "score_parts": {
+        "journal": 100,
+        "pubtype": 18,
+        "recency": 6.0
+      },
+      "tier": 2
+    },
+    {
+      "pmid": "40000004",
+      "title": "Prostatic artery embolization outcomes: a single-center experience",
+      "abstract": "Purpose: Report 2-year outcomes of PAE. Results: Symptom improvement in most patients.",
+      "journal": "J Vasc Interv Radiol",
+      "date": "2026-06-11",
+      "authors": [
+        "Garcia R",
+        "Mueller T",
+        "Sato H"
+      ],
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "doi": "10.1016/j.jvir.2024.00004",
+      "journal_tier": 2,
+      "score": 60.0,
+      "score_parts": {
+        "journal": 60,
+        "pubtype": 0,
+        "recency": 0.0
+      },
+      "tier": 3
+    },
+    {
+      "pmid": "40000005",
+      "title": "An unusual presentation of a sacral chordoma: case report",
+      "abstract": "We report a rare case with atypical imaging findings.",
+      "journal": "Clin Radiol",
+      "date": "2026-06-10",
+      "authors": [
+        "Brown J"
+      ],
+      "pubtypes": [
+        "Journal Article",
+        "Case Reports"
+      ],
+      "doi": "10.1016/j.crad.2024.00005",
+      "journal_tier": 3,
+      "score": 20.0,
+      "score_parts": {
+        "journal": 35,
+        "pubtype": -15,
+        "recency": 0.0
+      },
+      "tier": 3
+    }
+  ]
+}
