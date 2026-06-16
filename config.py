@@ -97,7 +97,7 @@ RETMAX = 300              # en fazla kaç makale çekilsin
 EXTRA_TERMS = ""
 
 # Makale "tier" rozetleri için toplam skor eşikleri (görsel sınıflandırma)
-TIER1_THRESHOLD = 130
+TIER1_THRESHOLD = 110
 TIER2_THRESHOLD = 80
 
 # Dergi listesini sorgu için düz liste olarak çıkar

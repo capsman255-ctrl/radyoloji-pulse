@@ -21,6 +21,12 @@ import xml.etree.ElementTree as ET
 
 import requests
 
+try:
+    from deep_translator import GoogleTranslator
+    _TRANSLATOR = GoogleTranslator(source="en", target="tr")
+except Exception:
+    _TRANSLATOR = None
+
 from config import (
     JOURNALS, JOURNAL_TIERS, JOURNAL_TIER_WEIGHT, DEFAULT_TIER,
     PUBTYPE_WEIGHTS, RECENCY_PER_DAY,
@@ -227,6 +233,28 @@ def recency_bonus(date_iso):
     return max(0, (RELDATE_DAYS - days)) * RECENCY_PER_DAY
 
 
+def translate_tr(text):
+    """Özeti Türkçeye çevirir. Çevirmen yoksa ya da hata olursa boş döner
+    (site bu durumda tarayıcıda otomatik çeviriyi kullanır)."""
+    if not text or _TRANSLATOR is None:
+        return ""
+    try:
+        parts = []
+        s = text
+        # Google ~5000 karakter sınırı; cümle sınırından parçala
+        while len(s) > 4500:
+            cut = s.rfind(". ", 0, 4500)
+            if cut < 1000:
+                cut = 4500
+            parts.append(_TRANSLATOR.translate(s[:cut + 1]))
+            s = s[cut + 1:]
+            time.sleep(0.2)
+        parts.append(_TRANSLATOR.translate(s))
+        return " ".join(p for p in parts if p).strip()
+    except Exception:
+        return ""
+
+
 def score_article(a):
     jt = journal_tier(a["journal"])
     jw = JOURNAL_TIER_WEIGHT.get(jt, JOURNAL_TIER_WEIGHT[DEFAULT_TIER])
@@ -269,6 +297,12 @@ def build():
     arts = efetch(pmids) if pmids else []
     for a in arts:
         score_article(a)
+    if _TRANSLATOR is None:
+        print("  (deep-translator yok — özet çevirisi atlanıyor; site tarayıcıda çevirir.)")
+    else:
+        print("  Özetler Türkçeye çevriliyor...")
+    for a in arts:
+        a["abstract_tr"] = translate_tr(a.get("abstract", ""))
     payload = write_json(arts)
     print("Tamam -> data.json  (%d makale, %d Tier 1)"
           % (payload["count"], payload["tier1_count"]))

@@ -3,7 +3,7 @@
   "window_days": 5,
   "datetype": "edat",
   "count": 20,
-  "tier1_count": 0,
+  "tier1_count": 3,
   "source": "PubMed (NCBI E-utilities)",
   "articles": [
     {
@@ -35,7 +35,7 @@
         "pubtype": 10,
         "recency": 0.0
       },
-      "tier": 2
+      "tier": 1
     },
     {
       "pmid": "42275241",
@@ -62,7 +62,7 @@
         "pubtype": 10,
         "recency": 0.0
       },
-      "tier": 2
+      "tier": 1
     },
     {
       "pmid": "42275240",
@@ -95,7 +95,7 @@
         "pubtype": 10,
         "recency": 0.0
       },
-      "tier": 2
+      "tier": 1
     },
     {
       "pmid": "42298150",
