@@ -169,8 +169,7 @@
     <div class="brand" style="margin-top:6px">
       <h1>Radyoloji <span class="accent">Pulse</span></h1>
     </div>
-    <p class="tagline">Son <span id="window-days">7</span> günün radyoloji ve görüntüleme
-      literatüründen öne çıkanlar; dergi ağırlığı ve makale tipine göre etki skoruyla sıralı.</p>
+    <p class="tagline">Radyoloji alanında güncel ve yenilenen literatür derlemesi.</p>
     <div class="ramp" aria-hidden="true"></div>
     <div class="stats" id="stats"></div>
   </header>
@@ -246,7 +245,8 @@ async function gtxTranslate(text){
 }
 
 function renderStats(d){
-  document.getElementById("window-days").textContent = d.window_days ?? 7;
+  const wd = document.getElementById("window-days");
+  if(wd) wd.textContent = d.window_days ?? 7;
   document.getElementById("stats").innerHTML = `
     <div class="stat"><div class="n">${d.count||0}</div><div class="l">Makale</div></div>
     <div class="stat gold"><div class="n">${d.tier1_count||0}</div><div class="l">Tier 1</div></div>
